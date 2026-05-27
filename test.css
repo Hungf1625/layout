@@ -1,0 +1,254 @@
+
+
+a {
+    text-decoration: none;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+.container {
+    position: relative;
+    background-image: url(img/backgroundImg.png);
+    width: 100%;
+    min-height: 100vh;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.body{
+    height: fit-content;
+    width: 100%;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(210, 180, 140);
+    width: 50%;
+    height: 100vh;
+    padding: 5px;
+    padding-top: 50px;
+    overflow-x: hidden;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    z-index: 99;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-in-out;
+}
+
+.sidebarItemContainer {
+    padding: 5px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    padding-bottom: 10px ;
+    border-bottom: 1px solid rgb(111, 78, 55);
+    width: 100%;
+}
+
+.sideBarItem{
+    color: rgb(111, 78, 55);
+    transition: 0.3s;
+    display: block;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    align-items: center; 
+}
+
+.sideBarItem:hover{
+    color: rgb(255, 255, 255);
+}
+
+.closeSBBtn{
+  position: absolute;
+  top: 0;
+  left: 75%;
+  color: rgb(111, 78, 55);
+  font-size: 30px;
+}
+
+.openSBBtn{
+    font-size: 30px;
+    color: rgb(111, 78, 55);
+    padding-left: 5px;
+    padding-bottom: 10%;
+}
+
+.userAuthBtn{
+    font-size: 30px;
+    color: rgb(111, 78, 55);
+    padding-right: 5px;
+    padding-bottom: 10%;
+}
+
+.overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(138, 138, 138, 0.5);
+            z-index: 98;
+        }
+
+.userAuthSideBar{
+    position: fixed;
+    top: 5%;
+    right: 0;
+    width: 30%;
+    height: fit-content;
+    background-color: rgb(210, 180, 140);
+    overflow-x: hidden;
+    justify-content: center;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+    border-radius: 0 0 0 10px;
+    z-index: 99;
+}
+
+.userAuthSideBarItemContainer{
+    padding: 5px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    padding-bottom: 10px ;
+}
+
+.userAuthSideBarItem{
+    color: rgb(111, 78, 55);
+    transition: 0.3s;
+    display: block;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    align-items: center; 
+}
+
+.userAuthSideBarItem:hover{
+    color: rgb(255, 255, 255);
+}
+
+.userAuthLine{
+    height: 2px;
+    background-color: rgb(111, 78, 55);
+    width: 100%;
+}
+
+.mainLayout{
+    width: 100%;
+    height: 100%;
+}
+
+.imgBox{
+    width: 100%;
+}
+
+.mainImg{
+    width: 100%;
+    height: 60%;
+    margin-top: 2%;
+    position: relative;
+    margin-bottom: 25%;
+}
+
+.inforBoxContainer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 5px;
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    top: 50vh;
+}
+
+.inforBox{
+    display: block;
+    text-align: center;
+    background: #F8E7D2;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.5s, box-shadow 0.5s;
+    padding: 10px;
+}
+
+.inforBoxI{
+    font-size: 100%;
+}
+
+.inforBoxP{
+    font-size: 10px;
+    font-family: "Open Sans", sans-serif;
+}
+
+.exploreNowBtnContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.exploreNowBtn{
+    background: rgb(210, 180, 140);
+    color: #4A2C1B;
+    border: none;
+    padding: 12px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footerImg{
+    position: relative;
+}
+
+.footerInfo{
+    position: absolute;
+    bottom: 1%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.footerIconItem{
+    padding-bottom: 10%;
+}
+
+.footerIcon{
+    color: white;
+    font-size: 2.5vh;
+    padding-right: 10%;
+}
+
+.footerInfoItem{
+    display: flex;
+    width: 30vh;
+    border-bottom: 1px solid white;
+}
+
+.footerInfoP{
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.5vh;
+}
+
+.footer{
+    margin-top: 7%;
+}
