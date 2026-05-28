@@ -252,3 +252,41 @@ body {
 .footer{
     margin-top: 7%;
 }
+
+@media (min-width: 460px) and (max-width: 520px ) {
+    .inforBoxContainer{
+        top: 60vh;
+    }
+
+    .inforBoxP{
+        font-size: 15px;
+    }
+
+    .mainImg{
+        margin-bottom: 35%;
+    }
+}
+
+@media (min-width: 520px) and (max-width: 600px) {
+    .inforBoxContainer{
+        top: 65vh;
+    }
+
+    .inforBoxP{
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 680px){
+    .inforBoxContainer{
+        top: 75vh;
+    }
+
+    .inforBoxP{
+        font-size: 20px;
+    }
+
+    .mainImg{
+        margin-bottom: 25%;
+    }
+}
