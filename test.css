@@ -255,7 +255,7 @@ body {
 
 @media (min-width: 460px) and (max-width: 520px ) {
     .inforBoxContainer{
-        top: 60vh;
+        top: 55vh;
     }
 
     .inforBoxP{
