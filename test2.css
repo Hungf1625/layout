@@ -1,37 +1,37 @@
-/* ========== RESET CSS ========== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 a {
     text-decoration: none;
 }
 
-p {
+p{
     margin-block-start: 0;
     margin-block-end: 0;
 }
 
-button {
+button{
     border: none;
     outline: none;
     background: none;
-    cursor: pointer;
 }
 
 ul {
     list-style: none;
-    padding-inline-start: 0;
-    margin-block-start: 0;
-    margin-block-end: 0;
+    padding-inline-start: 0px;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
 }
 
-/* ========== BASE ========== */
-html, body {
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
     height: 100%;
-    overflow-x: hidden;
+    min-height: 100%;
+    overflow-x: hidden; /* prevent page shifting / horizontal scroll */
 }
 
 .container {
@@ -39,88 +39,108 @@ html, body {
     background-image: url('img/backgroundImg.png');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
     width: 100%;
+    max-width: 100%;
     min-height: 100vh;
 }
 
-/* ========== HEADER ========== */
+.mainLogo{
+    width: 45%; 
+    height: 45%;
+}
+
 .header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 10px 15px;
+    padding: 5px;
 }
 
-.mainLogo {
-    width: 45%;
-    height: auto;
+.body{
+    height: 100%;
+    width: 100%;
 }
 
-.openSBBtn,
-.userAuthBtn {
-    font-size: 30px;
-    color: rgb(111, 78, 55);
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-/* ========== SIDEBAR TRÁI ========== */
 .sidebar {
     position: fixed;
     top: 0;
     left: 0;
-    width: 280px;
-    height: 100%;
     background-color: rgb(210, 180, 140);
-    padding: 60px 15px 20px;
+    width: 50%;
+    height: 100vh;
+    padding: 5px;
+    padding-top: 50px;
+    overflow-x: hidden;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    z-index: 99;
     transform: translateX(-100%);
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: 100;
-    overflow-y: auto;
-    border-top-right-radius: 12px;
-    border-bottom-right-radius: 12px;
-}
-
-.sidebar.open {
-    transform: translateX(0);
+    transition: transform 0.5s ease-in-out;
 }
 
 .sidebarItemContainer {
-    padding: 8px 0;
-    margin-bottom: 8px;
+    padding: 5px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    padding-bottom: 10px ;
     border-bottom: 1px solid rgb(111, 78, 55);
     width: 100%;
 }
 
-.sideBarItem {
-    display: block;
+.sideBarItem{
     color: rgb(111, 78, 55);
+    transition: 0.3s;
+    display: block;
+    padding-left: 5px;
+    padding-right: 5px;
     font-size: 20px;
     font-weight: bold;
-    padding: 5px;
-    transition: 0.3s;
+    align-items: center; 
 }
 
-.sideBarItem:hover {
+.sideBarItem:hover{
     color: rgb(255, 255, 255);
-    padding-left: 20px;
 }
 
-.closeSBBtn {
-    position: absolute;
-    top: 0;
-    left: 75%;
-    color: rgb(111, 78, 55);
+.closeSBBtn{
+  position: absolute;
+  top: 0;
+  left: 75%;
+  color: rgb(111, 78, 55);
+  font-size: 30px;
+}
+
+.openSBBtn{
     font-size: 30px;
-    background: none;
+    color: rgb(111, 78, 55);
+    padding-left: 5px;
+    padding-bottom: 10%;
     border: none;
-    cursor: pointer;
+    outline: none;
+    background: none;
 }
 
-/* ========== SIDEBAR PHẢI ========== */
-.userAuthSideBar {
+.userAuthBtn{
+    font-size: 30px;
+    color: rgb(111, 78, 55);
+    padding-right: 5px;
+    padding-bottom: 10%;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(138, 138, 138, 0.5);
+            z-index: 98;
+        }
+
+.userAuthSideBar{
     position: fixed;
     top: 5%;
     right: 0;
@@ -135,14 +155,14 @@ html, body {
     z-index: 99;
 }
 
-.userAuthSideBarItemContainer {
+.userAuthSideBarItemContainer{
     padding: 5px;
     margin-bottom: 5px;
     margin-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 10px ;
 }
 
-.userAuthSideBarItem {
+.userAuthSideBarItem{
     color: rgb(111, 78, 55);
     transition: 0.3s;
     display: block;
@@ -150,42 +170,29 @@ html, body {
     padding-right: 5px;
     font-size: 20px;
     font-weight: bold;
-    align-items: center;
+    align-items: center; 
 }
 
-.userAuthSideBarItem:hover {
+.userAuthSideBarItem:hover{
     color: rgb(255, 255, 255);
 }
 
-.userAuthLine {
+.userAuthLine{
     height: 2px;
     background-color: rgb(111, 78, 55);
     width: 100%;
 }
 
-/* ========== OVERLAY ========== */
-.overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(138, 138, 138, 0.5);
-    z-index: 98;
-}
-
-/* ========== MAIN CONTENT ========== */
-.mainLayout {
+.mainLayout{
     width: 100%;
     height: 100%;
 }
 
-.imgBox {
+.imgBox{
     width: 100%;
 }
 
-.mainImg {
+.mainImg{
     width: 100%;
     height: 60%;
     margin-top: 2%;
@@ -194,7 +201,7 @@ html, body {
     z-index: 1;
 }
 
-.inforBoxContainer {
+.inforBoxContainer{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
@@ -206,32 +213,31 @@ html, body {
     z-index: 2;
 }
 
-.inforBox {
+.inforBox{
     display: block;
     text-align: center;
     background: #F8E7D2;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     transition: transform 0.5s, box-shadow 0.5s;
     padding: 10px;
 }
 
-.inforBoxI {
+.inforBoxI{
     font-size: 100%;
 }
 
-.inforBoxP {
+.inforBoxP{
     font-size: 10px;
     font-family: "Open Sans", sans-serif;
 }
 
-/* ========== BUTTONS ========== */
-.exploreNowBtnContainer {
+.exploreNowBtnContainer{
     display: flex;
     justify-content: center;
 }
 
-.exploreNowBtn {
+.exploreNowBtn{
     background: rgb(210, 180, 140);
     color: #4A2C1B;
     border: none;
@@ -246,15 +252,13 @@ html, body {
     gap: 8px;
 }
 
-.exploreNowBtn:hover {
-    background: #C4A484;
-    transform: translateY(-2px);
+.footerImg{
+    position: relative;
 }
 
-/* ========== FOOTER ========== */
-.footer {
+.footer{
     position: relative;
-    background-image: url('img/footerImg.png');
+    background-image: url('img/footerImg.png');  /* Đường uốn lượn dạng SVG */
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
@@ -263,43 +267,42 @@ html, body {
     color: white;
 }
 
-.footerInfo {
+.footerInfo{
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
 
-.footerIconItem {
+.footerIconItem{
     margin-bottom: 30%;
 }
 
-.footerIcon {
+.footerIcon{
     color: white;
     font-size: 2.5vh;
     padding-right: 4%;
 }
 
-.footerInfoItem {
+.footerInfoItem{
     display: flex;
     width: 30vh;
     border-bottom: 1px solid white;
     padding: 5px;
 }
 
-.footerInfoP {
+.footerInfoP{
     color: white;
     font-family: "Open Sans", sans-serif;
     font-size: 1.5vh;
     margin-bottom: 5%;
 }
 
-/* ========== PC VERSION (ẩn/hiện) ========== */
-.exploreNowBtnContainerPc {
+.exploreNowBtnContainerPc{
     display: none;
     justify-content: center;
 }
 
-.exploreNowBtnPc {
+.exploreNowBtnPc{
     background: rgb(210, 180, 140);
     color: #4A2C1B;
     border: none;
@@ -314,215 +317,334 @@ html, body {
     gap: 8px;
 }
 
-.mainImgPc {
+.mainImgPc{
     display: none;
 }
 
-/* ========== RESPONSIVE - GOM NHÓM ========== */
-
-/* Nhóm 1: Mobile nhỏ (360px - 375px) */
-@media (min-width: 360px) and (max-width: 470px) {
-    .inforBoxContainer {
+@media (min-width: 360px) {
+    .inforBoxContainer{
         top: 48%;
     }
-    .inforBoxP {
+}
+
+@media (min-width: 375px) {
+
+    .inforBoxContainer{
+        top: 48%;
+    }
+
+    .inforBoxP{
         font-size: 80%;
     }
-    .mainImg {
-        margin-bottom: 35%;
+
+    .mainImg{
+        margin-bottom: 30%;
     }
-    .footerIcon {
+
+    .footerIcon{
         font-size: 150%;
         margin-top: 7%;
     }
-    .footerInfoP {
+
+    .footerInfoP{
         font-size: 80%;
     }
 }
 
-/* Nhóm 2: Mobile trung bình (470px - 520px) */
-@media (min-width: 470px) and (max-width: 520px) {
-    .inforBoxContainer {
+@media (min-width: 470px){
+
+    .inforBoxContainer{
         top: 47%;
     }
-    .inforBoxP {
-        font-size: 100%;
+
+    .inforBoxP{
+        font-size: 70%;
     }
-    .footerInfo {
+
+    .footerInfo{
         padding: 1%;
     }
-    .mainImg {
+
+    .mainImg{
         margin-bottom: 25%;
     }
-    .exploreNowBtn {
-        font-size: 150%;
-    }
-    .footerIcon {
-        font-size: 150%;
-    }
-    .footerInfoP {
+
+    .inforBoxP{
         font-size: 100%;
     }
-    .openSBBtn,
-    .userAuthBtn {
-        font-size: 200%;
+
+    .exploreNowBtn{
+        font-size: 150%;
+    }
+
+    .footerIcon{
+        font-size: 150%;
+    }
+
+    .footerInfoP{
+        font-size: 100%;
     }
 }
 
-/* Nhóm 3: Mobile lớn (520px - 600px) */
-@media (min-width: 520px) and (max-width: 600px) {
-    .inforBoxContainer {
-        top: 57vh;
+
+
+@media (min-width: 500px) and (max-width: 520px ) {
+    .inforBoxContainer{
+        top: 55vh;
     }
-    .inforBoxP {
+
+    .openSBBtn{
+        font-size: 200%;
+    }
+
+    .userAuthBtn{
+        font-size: 200%;
+    }
+
+    .inforBoxP{
         font-size: 15px;
     }
-    .openSBBtn,
-    .userAuthBtn {
+
+    .mainImg{
+        margin-bottom: 35%;
+    }
+}
+
+@media (min-width: 520px) and (max-width: 600px) {
+    .inforBoxContainer{
+        top: 57vh;
+    }
+
+    .openSBBtn{
         font-size: 250%;
     }
-    .exploreNowBtn {
+
+    .userAuthBtn{
+        font-size: 250%;
+    }
+
+    .exploreNowBtn{
         font-size: 150%;
     }
-    .footerIcon {
+
+    .inforBoxP{
+        font-size: 15px;
+    }
+
+    .footerIcon{
         font-size: 150%;
     }
-    .footerInfoP {
+
+    .footerInfoP{
         font-size: 110%;
     }
 }
 
-/* Nhóm 4: Tablet (600px - 700px) */
-@media (min-width: 600px) and (max-width: 700px) {
-    .inforBoxContainer {
+@media (min-width: 600px) and (max-width: 700px){
+    .inforBoxContainer{
         top: 75vh;
     }
-    .inforBoxP {
-        font-size: 20px;
-    }
-    .openSBBtn,
-    .userAuthBtn {
+
+    .openSBBtn{
         font-size: 250%;
     }
-    .mainImg {
+
+    .userAuthBtn{
+        font-size: 250%;
+    }
+
+    .inforBoxP{
+        font-size: 20px;
+    }
+
+    .mainImg{
         margin-bottom: 25%;
     }
-    .exploreNowBtn {
+
+    .exploreNowBtn{
         font-size: 140%;
     }
-    .footerIcon {
+
+    .footerIcon{
         font-size: 200%;
     }
-    .footerInfoP {
+
+    .footerInfoP{
         font-size: 130%;
     }
 }
 
-/* Nhóm 5: Tablet lớn (700px - 800px) */
-@media (min-width: 700px) and (max-width: 800px) {
-    .inforBoxContainer {
+@media (min-width: 700px){
+
+    .inforBoxContainer{
         top: 85vh;
     }
-    .inforBoxI {
-        font-size: 300%;
-    }
-    .inforBoxP {
-        font-size: 140%;
-    }
-    .openSBBtn,
-    .userAuthBtn {
+
+    .openSBBtn{
         font-size: 400%;
     }
-    .mainImg {
+
+    .userAuthBtn{
+        font-size: 400%;
+    }
+
+    .inforBoxI{
+        font-size: 300%;
+    }
+
+    .inforBoxP{
+        font-size: 140%;
+    }
+
+    .mainImg{
         margin-bottom: 33%;
     }
-    .exploreNowBtn {
+
+    .exploreNowBtn{
         font-size: 250%;
     }
-    .footer {
+
+    .footer{
         padding: 70px 20px 0px;
     }
-    .footerInfoItem {
+
+    .footerInfoItem{
         width: 150%;
     }
-    .footerIcon {
+
+    .footerIcon{
         font-size: 250%;
     }
-    .footerInfoP {
+
+    .footerInfoP{
         font-size: 150%;
-    }
-    .footerIconContainer{
-        margin-top: 7%;
     }
 }
 
-/* Nhóm 6: Laptop nhỏ (800px - 1024px) */
-@media (min-width: 800px) and (max-width: 1024px) {
-    .inforBoxContainer {
+@media (min-width: 800px){
+
+    .inforBoxContainer{
         top: 75vh;
     }
-    .inforBoxI {
-        font-size: 300%;
-    }
-    .inforBoxP {
-        font-size: 140%;
-    }
-    .openSBBtn,
-    .userAuthBtn {
+
+    .openSBBtn{
         font-size: 400%;
     }
-    .mainImg {
-        margin-bottom: 25%;
+
+    .userAuthBtn{
+        font-size: 400%;
     }
-    .exploreNowBtn {
+
+    .inforBoxI{
+        font-size: 300%;
+    }
+
+    .inforBoxP{
+        font-size: 140%;
+    }
+
+    .mainImg{
+        margin-bottom: 20%;
+    }
+
+    .exploreNowBtn{
         font-size: 250%;
     }
-    .footerIcon {
-        font-size: 250%;
+
+    .footerIcon{
+        font-size: 300%;
     }
-    .footerInfoP {
-        font-size: 150%;
-    }
-    .footerIconContainer{
-        margin-top: 7%;
+
+    .footerInfoP{
+        font-size: 170%;
     }
 }
 
-/* Nhóm 7: Laptop (1024px - 1280px) */
-@media (min-width: 1024px) and (max-width: 1280px) {
-    .inforBoxContainer {
-        top: 85vh;
+@media (min-width: 912px){
+
+    .inforBoxContainer{
+        top: 75vh;
     }
-    .inforBoxI {
-        font-size: 300%;
-    }
-    .inforBoxP {
-        font-size: 160%;
-    }
-    .openSBBtn,
-    .userAuthBtn {
+
+    .openSBBtn{
         font-size: 400%;
     }
-    .mainImg {
-        margin-bottom: 25%;
+
+    .userAuthBtn{
+        font-size: 400%;
     }
-    .exploreNowBtn {
+
+    .inforBoxI{
         font-size: 300%;
     }
-    .footer {
+
+    .inforBoxP{
+        font-size: 140%;
+    }
+
+    .mainImg{
+        margin-bottom: 20%;
+    }
+
+    .exploreNowBtn{
+        font-size: 250%;
+    }
+
+    .footerIcon{
+        font-size: 300%;
+    }
+
+    .footerInfoP{
+        font-size: 180%;
+    }
+}
+
+@media (min-width: 1024px){
+
+    .inforBoxContainer{
+        top: 85vh;
+    }
+
+    .openSBBtn{
+        font-size: 400%;
+    }
+
+    .userAuthBtn{
+        font-size: 400%;
+    }
+
+    .inforBoxI{
+        font-size: 300%;
+    }
+
+    .inforBoxP{
+        font-size: 160%;
+    }
+
+    .mainImg{
+        margin-bottom: 20%;
+    }
+
+    .exploreNowBtn{
+        font-size: 300%;
+    }
+
+    .footer{
         padding: 90px 20px 0px;
     }
-    .footerIcon {
+
+    .footerIcon{
         font-size: 350%;
     }
-    .footerInfoP {
+
+    .footerInfoP{
         font-size: 200%;
     }
 }
 
-/* Nhóm 8: Desktop (1280px trở lên) - GIỮ NGUYÊN CODE GỐC */
 @media (min-width: 1280px) {
-    .sidebar {
+
+    .sidebar{
         display: none;
     }
 
@@ -534,41 +656,41 @@ html, body {
         background-image: url(img/backgroundImgPc.png);
     }
 
-    .mainImg {
+    .mainImg{
         display: none;
     }
 
-    .openSBBtn {
+    .openSBBtn{
+        display: none;
+    }
+    
+    .exploreNowBtn{
         display: none;
     }
 
-    .exploreNowBtn {
-        display: none;
-    }
-
-    .imgBox {
+    .imgBox{
         display: flex;
     }
 
-    .userAuthBtn {
+    .userAuthBtn{
         padding-bottom: 0;
         font-size: 40px;
     }
 
-    .inforBoxContainer {
+    .inforBoxContainer{
         grid-template-columns: repeat(4, 1fr);
         position: unset;
         margin-top: 60%;
         z-index: 0;
     }
 
-    .inforBox {
+    .inforBox{
         position: relative;
         box-shadow: unset;
         background-color: unset;
     }
 
-    .inforBox::after {
+    .inforBox::after{
         content: '';
         position: absolute;
         right: -10px;
@@ -579,25 +701,26 @@ html, body {
         background-color: #D2B48C;
     }
 
-    .inforBoxP {
+    .inforBoxP{
         font-size: 13.5px;
     }
 
-    .userAuthSideBar {
+
+    .userAuthSideBar{
         width: 10%;
         top: 10%;
     }
 
-    .mainLogo {
+    .mainLogo{
         width: 25%;
         height: 25%;
     }
 
-    .imgBox {
+    .imgBox{
         width: 100%;
     }
 
-    .mainImgPc {
+    .mainImgPc{
         display: block;
         width: 50%;
         height: 50%;
@@ -607,45 +730,44 @@ html, body {
         right: 0;
     }
 
-    .exploreNowBtnPc {
+    .exploreNowBtnPc{
         display: inline-flex;
         font-size: 17px;
     }
 
-    .exploreNowBtnContainerPc {
+    .exploreNowBtnContainerPc{
         display: flex;
         justify-content: center;
     }
 
-    .footer {
+    .footer{
         background-image: url(img/footerImgPc.png);
-        padding: 90px 20px 0px;
     }
 
-    .footerInfoUL {
+    .footerInfoUL{
         display: flex;
         gap: 50px;
     }
 
-    .footerInfo {
+    .footerInfo{
         padding: unset;
     }
 
-    .footerInfoItem {
+    .footerInfoItem{
         border-bottom: unset;
         width: 200px;
     }
 
-    .footerInfoP {
+    .footerInfoP{
         font-size: 15px;
     }
 
-    .footerIcon {
+    .footerIcon{
         font-size: 30px;
         margin-top: unset;
     }
 
-    .footerIconContainer {
+    .footerIconContainer{
         display: flex;
         gap: 25px;
     }
