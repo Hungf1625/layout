@@ -1,4 +1,3 @@
-/* ========== RESET CSS ========== */
 * {
     margin: 0;
     padding: 0;
@@ -36,12 +35,13 @@ html, body {
 
 .container {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     background-image: url('img/backgroundImg.png');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
     width: 100%;
-    min-height: 100vh;
 }
 
 /* ========== HEADER ========== */
@@ -179,8 +179,12 @@ html, body {
 .mainLayout {
     display: block;
     width: 100%;
-    height: 100%;
+    height: auto;
     max-width: 100%;
+}
+
+.body {
+    flex: 1;
 }
 
 .imgBox {
@@ -191,10 +195,10 @@ html, body {
 
 .mainImg {
     width: 100%;
-    height: 60%;
+    height: auto;
     margin-top: 2%;
     position: relative;
-    margin-bottom: 25%;
+    margin-bottom: 4rem;
     z-index: 1;
 }
 
@@ -339,7 +343,7 @@ html, body {
 .headerNav{
     display: none;
     gap: 20px;
-    margin-right: 40px;
+    margin-right: 10%;
 }
 
 .navItem{
@@ -365,14 +369,77 @@ html, body {
 
 /* introducePage */
 
+.introduceContainer{
+    display: flex;
+}
+
+.introduceBox{
+    padding: 20px 40px 0px;
+}
+
 .introduceParagraph{
-    font-family: "Open Sans", sans-serif;
+    font-family: "Playfair Display", serif;
     color: rgb(111, 78, 55);
     font-weight: bold;
     font-size: 200%;
-    padding: 5px;
+    padding: 10px 5px 5px;
     transition: 0.3s;
     text-align: center;
+}
+
+.introduceIconContainer{
+    text-align: center;
+    font-size: 250%;
+}
+
+.firstP{
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+    font-size: 170%;
+    margin-left: 20%;
+    margin-right: 10%;
+    margin-top: 3%;
+}
+
+.contentP{
+    font-family: "Playfair Display", serif;
+    font-size: 110%;
+    margin-left: 20%;
+    margin-right: 10%;
+    padding-top: 5px;
+    padding-right: 190px;
+    padding-left: 20px;
+    text-align: justify;
+}
+
+.missionP{
+    margin-top: 5%;
+    background-image: url(img/missionBoxBackground.png);
+    background-repeat: no-repeat;
+    width: fit-content;
+    height: fit-content;
+    margin-left: 20%;
+    padding: 10px 5px 5px;
+}
+
+.firstMP,.contentMP{
+    padding: 10px 10px 0px;
+}
+
+.firstMP{
+    padding: 10px;
+    font-size: 120%;
+    font-weight: bold;
+    font-family: "Playfair Display", serif;
+}
+
+.contentMP{
+    padding-right: 20px;
+    font-size: 105%;
+    max-width: 400px;
+    margin-right: 100px;
+    font-family: "Playfair Display", serif;
+    text-align: justify;
 }
 
 /* ========== RESPONSIVE - GOM NHÓM ========== */
@@ -383,13 +450,13 @@ html, body {
     /* homePage */
     
     .inforBoxContainer {
-        top: 48%;
+        top: 53%;
     }
     .inforBoxP {
         font-size: 80%;
     }
     .mainImg {
-        margin-bottom: 35%;
+        margin-bottom: 27%;
     }
     .footerIcon {
         font-size: 150%;
@@ -708,7 +775,7 @@ html, body {
         width: 100%;
     }
 
-    .mainImgPc {
+    .mainImgPc,.mainImgPcI {
         display: block;
         width: 50%;
         height: 50%;
@@ -728,6 +795,12 @@ html, body {
         justify-content: center;
     }
 
+    /* introducePage */
+
+    .mainImgPcI{
+        margin-left: 0%;
+    }
+    
     /* footer */
 
     .footer {
