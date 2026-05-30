@@ -56,25 +56,21 @@ body {
     letter-spacing: 4px;
     font-weight: 800;
     color: #3b2818;
+    font-family: "Playfair Display", serif;
 }
 
 .title-line {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
     margin: 12px 0 16px;
+}
+
+.title-line i {
+    font-size: 20px;
 }
 
 .title-line span {
     width: 55px;
     height: 1px;
     background: #3b2818;
-}
-
-.title-line i {
-    font-style: normal;
-    font-size: 18px;
 }
 
 .subtitle {
@@ -170,10 +166,6 @@ body {
     margin-bottom: -35px;
 }
 
-.gallery{
-    font-family: "Playfair Display", serif;
-}
-
 @media (min-width: 1280px) {
     .gallery-grid{
         display: flex;
@@ -187,8 +179,8 @@ body {
         display: flex;
     }
 
-    .gallery{
-        font-size: 70px;
+    .gallery-title h1{
+        font-size: 60px;
     }
 
     .subtitle{
@@ -201,11 +193,15 @@ body {
         max-width: unset;
     }
 
+    .title-line i{
+        font-size: 30px;
+    }
+
     .galleryTitleContainer{
         width: 70%;
-        padding-top: 5%;
+        padding-top: 7%;
         padding-right: 10%;
-        padding-left: 15%;
+        padding-left: 10%;
     }
 
     .gallery-title img{
