@@ -38,7 +38,7 @@ html, body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-image: url('img/backgroundImg.png');
+    background-image: url('../img/backgroundImg.png');
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -262,7 +262,7 @@ html, body {
 /* ========== FOOTER ========== */
 .footer {
     position: relative;
-    background-image: url('img/footerImg.png');
+    background-image: url('../img/footerImg.png');
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
@@ -824,7 +824,7 @@ html, body {
         left: 0;
         right: 0;
         max-width: 100%;
-        background-image: url(img/backgroundImgPc.png);
+        background-image: url(../img/backgroundImgPc.png);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: left;
@@ -891,7 +891,7 @@ html, body {
 
     .inforBoxImg{
         display: block;
-        margin-top: 20%;
+        margin-top: 10%;
     }
 
     .userAuthSideBar {
@@ -991,7 +991,7 @@ html, body {
 
     .missionP{
         margin-top: 5%;
-        background-image: url(img/missionBoxBackground.png);
+        background-image: url(../img/missionBoxBackground.png);
         background-repeat: no-repeat;
         width: fit-content;
         height: fit-content;
@@ -1115,6 +1115,8 @@ html, body {
     .imgBox{
         margin-left: 8vw;
     }
+
+    /*  */
 }
 
 @media (min-width: 1700px) {
@@ -1130,7 +1132,7 @@ html, body {
     }
 
     .inforBoxImg{
-        margin-top: 40%;
+        margin-top: 20%;
     }
 
     /* footer */
