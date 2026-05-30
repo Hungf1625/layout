@@ -110,6 +110,7 @@ html, body {
     font-weight: bold;
     padding: 5px;
     transition: 0.3s;
+    font-family: "Playfair Display", serif;
 }
 
 .sideBarItem:hover {

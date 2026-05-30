@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/pagesCss.css">
-    <link rel="stylesheet" href="css/loginLogout.css">
+    <link rel="stylesheet" href="css/galleryPage.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Imperial+Script&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <script src="js/test.js" defer></script>
     <title>Min-Coffee</title>
 </head>
@@ -32,7 +32,7 @@
                         MENU</a>
                 </li>
                 <li class="">
-                    <a href="galleryPage.html" class="navItem" style="display: flex;">GALLERY</a>
+                    <a href="galleryPage.html" class="navItemCurrent" style="display: flex;">GALLERY</a>
                 </li>
                 <li class="">
                     <a href="" class="navItem" style="display: flex;">TIN TỨC</a>
@@ -45,26 +45,59 @@
         </div>
         <div class="body">
             <div class="mainLayout">
-                <div class="register-container">
-                  <div class="register-box">
-                    <h2 class="registerh2">ĐĂNG KÝ THÀNH VIÊN</h2>
+                <section class="gallery-title">
+                    <div class="galleryTitleContainer">
+                        <h1 class="gallery">GALLERY</h1>
+                        <div class="title-line">
+                            <span></span>
+                            <i>☕</i>
+                            <span></span>
+                        </div>
+                        <p class="subtitle">Khoảnh khắc đẹp tại Min Coffee</p>
+                        <p class="desc">
+                            Những góc nhỏ bình yên, những tách cà phê thơm ngon
+                            và nụ cười thân quen. Cùng nhìn lại những khoảnh khắc
+                            đáng nhớ tại Min Coffee nhé!
+                        </p>
+                    </div>
+                    <img src="img/galleryPage/2dd2f2af-e96b-4904-9d90-5f27a3a1841b (1).png" alt="Không gian Min Coffee">
+                </section>
 
-                    <input type="text" placeholder="Họ và tên" />
+                <!-- Gallery Grid -->
+                <section class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="img/galleryPage/gallery_1.png" alt="Mèo tại Min Coffee">
+                    </div>
 
-                    <input type="email" placeholder="Email" />
+                    <div class="gallery-item">
+                        <img src="img/galleryPage/gallery_2.png" alt="Ly cà phê">
+                    </div>
 
-                    <input type="password" placeholder="Mật khẩu" />
+                    <div class="gallery-item">
+                        <img src="img/galleryPage/gallery_3.png" alt="Không gian quán">
+                    </div>
 
-                    <input type="password" placeholder="Nhập lại mật khẩu" />
+                    <div class="gallery-item">
+                        <img src="img/galleryPage/gallery_4.png" alt="Đồ uống Min Coffee">
+                    </div>
 
-                    <button>ĐĂNG KÝ</button>
+                    <div class="gallery-item">
+                        <img src="img/galleryPage/gallery_5.png" alt="Bánh ngọt">
+                    </div>
 
-                    <p class="login-link">
-                      Đã có tài khoản?
-                      <a href="login.html">Đăng nhập</a>
-                    </p>
-                  </div>
-                </div>
+                    <div class="gallery-item">
+                        <img src="img/galleryPage/gallery_6.png" alt="Góc quán cà phê">
+                    </div>
+
+                    <div class="gallery-item">
+                        <img src="img/galleryPage/gallery_6.png" alt="Góc quán cà phê">
+                    </div>
+
+                    <div class="gallery-item">
+                        <img src="img/galleryPage/gallery_6.png" alt="Góc quán cà phê">
+                    </div>
+                </section>
+
             </div>
         </div>
         <div class="footer">
@@ -114,7 +147,7 @@
                     MENU</a>
             </li>
             <li class="sidebarItemContainer">
-                <a href="galleryPage.html" class="sideBarItem" style="display: flex;">GALLERY</a>
+                <a href="" class="sideBarItem" style="display: flex;">GALLERY</a>
             </li>
             <li class="sidebarItemContainer">
                 <a href="" class="sideBarItem" style="display: flex;">TIN TỨC</a>
